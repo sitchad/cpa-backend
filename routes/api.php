@@ -26,6 +26,7 @@ Route::middleware(['auth:sanctum', 'anti.fraud'])->group(function () {
 
     Route::get('/wallet',          [WalletController::class, 'index']);
     Route::get('/wallet/history',  [WalletController::class, 'history']);
+    Route::post('/wallet/create',  [WalletController::class, 'create']); // ← NOUVEAU
 
     Route::get('/withdraw',    [WithdrawController::class, 'index']);
     Route::post('/withdraw',   [WithdrawController::class, 'store']);
